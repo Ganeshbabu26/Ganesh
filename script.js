@@ -1,11 +1,18 @@
-document.write("babu");
+document.write("Prime numbers between 1 and 100 are: <br>");
 
-function isPrime(n) 
+let i, j;
+n = 100
+for(i = 2;i<=n;i++)
 {
-    if (n <= 1) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) 
+    for(j = 2;j<i;j++)
+    {
+        if(i%j==0)
         {
-            if (n % i === 0) return false;
+            break;
         }
-    return true;
+    }
+    if(i==j)
+    {
+        document.write(i,", ");
+    }
 }
